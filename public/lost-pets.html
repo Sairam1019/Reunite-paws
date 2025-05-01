@@ -1,0 +1,65 @@
+<!-- public/lost-pets.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Pets - Pet Reunion</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="/about" onclick="navigateTo('about')">About Us</a></li>
+                <li><a href="/contact" onclick="navigateTo('contact')">Contact Us</a></li>
+                <li><a href="/food-tips" onclick="navigateTo('food-tips')">Food Tips</a></li>
+                <li><a href="/training-tips" onclick="navigateTo('training-tips')">Training Tips</a></li>
+                <li><a href="/lost-pets" onclick="navigateTo('lost-pets')">Lost Pets</a></li>
+                <li><a href="/found-pets" onclick="navigateTo('found-pets')">Found Pets</a></li>
+                <li><a href="/adoptable-pets" onclick="navigateTo('adoptable-pets')">Adopters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Lost Pets Listing -->
+    <div class="container">
+        <h1>Lost Pets</h1>
+        <div class="pets-container">
+            <!-- Lost Pets will be displayed here -->
+            <script>
+                fetch('/api/lost-pets')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.querySelector('.pets-container');
+                        if (data.length === 0) {
+                            container.innerHTML = '<p>No lost pets reported at the moment.</p>';
+                            return;
+                        }
+                        data.forEach(pet => {
+                            container.innerHTML += `
+                                <div class="pet-card">
+                                    ${pet.photo ? `<img height="100px" width="200px" src="/${pet.photo}" alt="${pet.name}" />` : ''}
+                                    <h3>${pet.name}</h3>
+                                    <p>${pet.description}</p>
+                                    <p><strong>Last Seen:</strong> ${pet.lastSeen}</p>
+                                    <p><strong>email:</strong> ${pet.email}</p>
+                                    <p><strong>contact no:</strong> ${pet.contact || "N?A"}</p>
+                                    <p><strong>Pet id:</strong> ${pet.petid || "N?A"}</p>
+                                    <p><strong>Reward Amount:</strong> ${pet.reward}</p>
+                                </div>
+                            `;
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching lost pets:', error);
+                        document.querySelector('.pets-container').innerHTML = '<p>Error loading lost pets.</p>';
+                    });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+pen in app
+Sign up
+
+Sign in
+
+
+
+Image Mapping using CSS & HTML
+TechiesHub9
+TechiesHub9
+
+·
+Follow
+
+5 min read
+·
+Nov 9, 2020
+
+Share
+
+This Image mapping tutorial contains an Image of India’s Map. In this tutorial, when cursor goes on each state on a map, it displays a pop-up div about that state’s information like Capital of that state and image of state’s culture.
+Refer below gif image :
+
+
+In above Image, I have created different hotspots for each state, due to which when cursor goes on any particular state it displays a pop up div with some info.
+Code for above Image mapping using HTML and CSS
+
+<html>
+<head>
+<title>CSS image mapping</title>
+<style type=”text/css”>
+#map{
+float:;
+<!–align-left:center;–!>
+margin-left:400;
+padding:;
+width:1299px;
+height:1413px;
+background:url(map1.gif);
+background-repeat:no-repeat;
+font-family:arial,helvetica;
+font-size:10pt;
+}
+#map li{
+margin:0;
+padding:0;
+list-style:none;
+}
+#map li a{
+position:absolute;
+display:block;
+background:url(blank.gif);
+text-decoration:none;
+color:#000;
+}
+#map li a span{display:none;}
+
+#map li a:hover span{
+position:absolute;
+display:block;
+width:210px;
+left:20px;
+top:20px;
+border:4px solid #000;
+background:#fff;
+padding:5px;
+filter:alpha(opacity=80);
+opacity:0.8;
+}
+#map a.jk{
+top:9px;
+left:98px;
+width:100px;
+height:100px;
+}
+#map a.hp{
+top:94px;
+left:170px;
+width:40px;
+height:40px;
+height:111px;
+}
+#map a.pun{
+top:101px;
+left:118px;
+width:50px;
+height:50px;
+}
+#map a.raj{
+top:182px;
+left:31px;
+width:156px;
+height:252px;
+}
+#map a.guj{
+top:230px;
+left:10px;
+width:102px;
+height:100px;
+}
+#map a.asam{
+top:125px;
+left:400px;
+width:480px;
+height:250px;
+}
+#map a.maharashtra{
+top:303px;
+left:80px;
+width:201px;
+height:388px;
+}
+#map a.kerala{
+top:470px;
+left:100px;
+width:145px;
+height:528px;
+}
+#map a.ap{
+top:400px;
+left:161px;
+width:100px;
+height:100px;
+}
+#map a.up{
+top:180px;
+left:210px;
+width:105px;
+height:79px;
+}
+#map a.bih{
+top:203px;
+left:285px;
+width:50px;
+height:60px;
+}
+#map a.uttaranchal{
+top:132px;
+left:182px;
+width:100px;
+height:100px;
+}
+#map a.hariyana{
+top:160px;
+left:146px;
+width:100px;
+height:100px;
+}
+#map a.mp{
+top:235px;
+left:137px;
+width:100px;
+height:100px;
+}
+#map a.chattis{
+top:270px;
+left:244px;
+width:100px;
+height:300px;
+}
+#map a.jhar{
+top:245px;
+left:295px;
+width:100px;
+height:100px;
+}
+#map a.orissa{
+top:354px;
+left:296px;
+width:200px;
+height:60px;
+}
+#map a.wb{
+top:286px;
+left:370px;
+width:50px;
+height:60px;
+}
+#map a.sikkim{
+top:174px;
+left:390px;
+width:102px;
+height:110px;
+}
+#map a.meghalaya{
+top:213px;
+left:500px;
+width:412px;
+height:225px;
+}
+#map a.tripura{
+top:245px;
+left:499px;
+width:411px;
+height:265px;
+}
+#map a.mizoram{
+top:244px;
+left:417px;
+width:42px;
+height:40px;
+}
+#map a.manipur{
+top:243px;
+left:524px;
+width:50px;
+height:40px;
+}
+#map a.nagaland{
+top:235px;
+left:530px;
+width:41px;
+height:42px;
+}
+#map a.aruna{
+top:155px;
+left:432px;
+width:100px;
+height:50px;
+}
+#map a.karnataka{
+top:400px;
+left:110px;
+width:100px;
+height:100px;
+}
+#map a.tamil{
+top:381px;
+left:167px;
+width:100px;
+height:100px;
+}
+#map a.goa{
+top:405px;
+left:94px;
+width:98px;
+height:60px;
+}
+#map a.pond{
+top:200px;
+left:195px;
+width:240px;
+height:420px;
+}
+
+</style>
+</head>
+<body>
+<ul id=”map”>
+
+<li><a class=”jk” href=”#” title=”Jammu”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Jammu&Kashmir</font></blink> is the state of India.The capital of Jammu&Kashmir is<font color=”purple” size=”5″> Shrinagar.</font></b><br><img src=”IMG\j.jpg” width=”210px”></span></a></li>
+
+<li><a class=”hp” href=”#” title=”Himanchal pradesh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Himanchal Pradesh</font></blink>is the state of India.The capital of Himanchal Pradesh is<font color=”purple” size=”5″>Shimla.</font></b><br><img src=”IMG\hp.jpg” width=”210px”>
+</span></a></li>
+
+<li><a class=”pun” href=”#” title=”Punjab”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Punjab</font></blink> is the state of India.The capital of Punjab is <font color=”purple” size=”5″>Chandigarh.</font></b><br><img src=”IMG\punjab.jpg” width=”210px”></span></a></li>
+
+<li><a class=”hariyana” href=”#” title=”Hariyana”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Hariyana</font></blink> is the state of India.The capital of Hariyana is <font color=”purple” size=”5″>Chandigarh.</font></b><br><img src=”IMG\haryana1.jpg” width=”210px”></span></a></li>
+
+<li><a class=”raj” href=”#” title=”Rajsthan”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Rajsthan</font></blink> is the state of India.The capital of Rajsthan is <font color=”purple”size=”5″>Jaipur.</font></b><br><img src=”IMG\Raj.jpg”width=”210px”></span></a></li>
+
+<li><a class=”uttaranchal” href=”#” title=”Uttaranchal”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Uttaranchal</font></blink> is the state of India,also called as Uttarakhand.The capital of Uttaranchal is <font color=”purple”size=”5″>Dehradun.</font></b><br><img src=”IMG\utr.jpg”width=”210px”></span></a></li>
+
+<li><a class=”asam” href=”#” title=”Asam”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Asam</font></blink> is the state of India.The capital of Asam is <font color=”purple”size=”5″>Dispur.</b><br><img src=”IMG\asam.jpg” width=”210px”> </span></a></li>
+
+<li><a class=”maharashtra” href=”#” title=”Maharashtra”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Maharashtra</font></blink> is the state of India.The capital of Maharashtra is<font color=”purple” size=”5″> Mumbai.</font></b><br><img src=”IMG\koli.jpg” width=”210px”></span></a></li>
+
+<li><a class=”goa” href=”#” title=”Goa”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Goa</font></blink> is the state of India.The capital of Goa is<font color=”purple” size=”5″> Panaji.</font></b><br><img src=”IMG\goa5.jpg” width=”210px”></span></a></li>
+
+<li><a class=”pond” href=”#” title=”Pondicherry”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Pondicherry</font></blink> is the state of India.The capital of Pondicherry is<font color=”purple” size=”5″> Panaji.</b><br><img src=”IMG\Pondicherry.jpg” width=”210px”></span></a></li>
+
+<li><a class=”kerala” href=”#” title=”Kerala”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Kerala</font></blink>is the one state of India.The capital of Kerala is <font color=”purple” size=”4″>Tiruanantpuram.</font></b><br><img src=”IMG\3.jpg” width=”210px”></span></a></li>
+
+<li><a class=”tamil” href=”#” title=”TamilNadu”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Tamil Nadu</font></blink> is the state of India.The capital of Tamil Nadu is <font color=”purple” size=”5″>Chennai.</font></b><br><img src=”IMG\Tamil.jpg” width=”210px”></span></a></li>
+
+<li><a class=”ap” href=”#” title=”Andhra Pradesh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Andhra Pradesh</font></blink> is the state of India.The capital of Andhra Pradesh is <font color=”purple” size=”4″>Hyderabad.</font></b><br><img src=”IMG\Tirupati.jpg” width=”210px”> </span></a></li>
+
+<li><a class=”karnataka” href=”#” title=”Karnatak”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Karnatak</font></blink>is the state of India.The capital of Karnatak is <font color=”purple” size=”5″>Bengalore.</b><br><img src=”IMG\MysorePalace.jpg” width=”210px”
+title=”Mysore Palace”></span></a></li>
+
+<li><a class=”up” href=”#” title=”UttarPradesh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>UttarPradesh</font></blink> is the state of India.The capital of UttarPradesh is <font color=”purple” size=”5″>Lucknow.</b><br><img src=”IMG\up.jpg” width=”210px”> </span></a></li>
+
+<li><a class=”bih” href=”#” title=”Bihar”><span><b><blink><font size=”5″ color=”red”
+face=”Bookman Old Style”>Bihar</font></blink> is the state of India.The capital of Bihar is <font color=”purple” size=”5″>Patna.</b><br><img src=”IMG\bihar.jpg” width=”210px”></span></a></li>
+
+<li><a class=”guj” href=”#” title=”Gujarat”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Gujarat</font></blink> is the state of India.The capital of Gujarat is <font color=”purple” size=”5″>Gandhinagar.</b><br><img src=”IMG\Garba.jpg” width=”210px”></span></a></li>
+
+<li><a class=”mp” href=”#” title=”Madhya Pradesh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Madhya Pradesh</font></blink> is the state of India.The capital of MP is<font color=”purple” size=”5″>Bhopal.</b><br><img src=”IMG\1.jpg” width=”210px”></span></a></li>
+
+<li><a class=”chattis” href=”#” title=”Chattisgarh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Chattisgarh</font></blink> is the state of India.The capital of Chattisgarh is <font color=”purple” size=”5″>Raipur.</b><br><img src=”IMG\chatti.jpeg” width=”210px”></span></a></li>
+
+<li><a class=”jhar” href=”#” title=”Jharkhand”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Jharkhand</font></blink> is the state of India.The capital of Jharkhand is <font color=”purple” size=”5″>Ranchi.</b><br><img src=”IMG\jharkhand.jpg” width=”210px”></span></a></li>
+
+<li><a class=”wb” href=”#” title=”West Bengal”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>West Bengal</font></blink> is the state of India.The capital of West Bengal is <font color=”purple” size=”5″>Kolkata.</b><br><img src=”IMG\wb.jpg” width=”210px”></span></a></li>
+
+<li><a class=”orissa” href=”#” title=”Orissa”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Orissa</font></blink> is the state of India.The capital of Orissa is <font color=”purple” size=”5″>Bhubaneshwar.</b><br><img src=”IMG\orissa.jpg” width=”210px”></span></a></li>
+
+<li><a class=”sikkim” href=”#” title=”Sikkim”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Sikkim</font></blink> is the state of India.The capital of Sikkim is <font color=”purple” size=”5″>Gangtok.</b><br><img src=”IMG\sikkim.jpg” width=”210px”></span></a></li>
+
+<li><a class=”meghalaya” href=”#” title=”Meghalaya”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Meghalaya</font></blink> is the state of India.The capital of Meghalaya is <font color=”purple” size=”5″>Shillong.</b><br><img src=”IMG\Meghalaya.jpg” width=”210px”></span></a></li>
+
+<li><a class=”tripura” href=”#” title=”Tripura”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Tripura</font></blink> is the state of India.The capital of Tripura is <font color=”purple” size=”5″>Agartala. </b><br><img src=”IMG\tripura.jpg” width=”210px”></span></a></li>
+
+<li><a class=”mizoram” href=”#” title=”Mizoram”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Mizoram</font></blink> is the state of India.The capital of Mizoram is <font color=”purple” size=”5″>Aizawl.</b><br><img src=”IMG\mizo.jpg” width=”210px”></span></a></li>
+
+<li><a class=”manipur” href=”#” title=”Manipur”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Manipur</font></blink> is the state of India.The capital of Manipur is <font color=”purple” size=”5″>Imphal. </b><br><img src=”IMG\manipur.gif” width=”210px”></span></a></li>
+
+<li><a class=”nagaland” href=”#” title=”Nagaland”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Nagaland</font></blink> is the state of India.The capital of Nagaland is <font color=”purple” size=”5″>Kohima.</b><br><img src=”IMG\nagaland.jpg” width=”210px”></span></a></li>
+
+<li><a class=”aruna” href=”#” title=”Arunachal Pradesh”><span><b><blink><font size=”5″ color=”red” face=”Bookman Old Style”>Arunachal Pradesh</font></blink> is the state of India.The capital of AP is <font color=”purple” size=”5″>Itanagar. </b><br><img src=”IMG\arunachal.jpg” width=”210px”></span></a></li>
+</ul>
+<br>
+
+Assignment designed By: Komal S. Dawkhar(MCA Student)
+HTML5CSS3 Session 2015
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!-- public/lost-form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Pet - Pet Reunion</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="/about" onclick="navigateTo('about')">About Us</a></li>
+                <li><a href="/contact" onclick="navigateTo('contact')">Contact Us</a></li>
+                <li><a href="/food-tips" onclick="navigateTo('food-tips')">Food Tips</a></li>
+                <li><a href="/training-tips" onclick="navigateTo('training-tips')">Training Tips</a></li>
+                <li><a href="/lost-pets" onclick="navigateTo('lost-pets')">Lost Pets</a></li>
+                <li><a href="/found-pets" onclick="navigateTo('found-pets')">Found Pets</a></li>
+                <li><a href="/adoptable-pets" onclick="navigateTo('adoptable-pets')">Adopters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Lost Pet Form -->
+    <div class="container">
+        <h1>Report a Lost Pet</h1>
+        <form action="/submit/lost" method="POST" enctype="multipart/form-data" class="form-container">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="description">Pet Description:</label>
+            <textarea name="description" id="description" rows="4" required></textarea>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="Pet License">Pet id</label>
+            <input type="text" name="petid" id="petid" required>
+
+            <label for="Contact no">Contact no</label>
+            <input type="number" name="contact" id="contact" required>
+
+            <label for="Reward amount">Reward amount</label>
+            <input type="number" name="reward" id="reward" required>
+
+            <label for="lastSeen">Last Seen Location:</label>
+            <input type="text" name="lastSeen" id="lastSeen" required>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" name="photo" id="photo" accept="image/*" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

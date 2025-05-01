@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Reunion</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="/about" onclick="navigateTo('about')">About Us</a></li>
+                <li><a href="/contact" onclick="navigateTo('contact')">Contact Us</a></li>
+                <li><a href="/food-tips" onclick="navigateTo('food-tips')">Food Tips</a></li>
+                <li><a href="/training-tips" onclick="navigateTo('training-tips')">Training Tips</a></li>
+                <li><a href="/lost-pets" onclick="navigateTo('lost-pets')">Lost Pets</a></li>
+                <li><a href="/found-pets" onclick="navigateTo('found-pets')">Found Pets</a></li>
+                <li><a href="/adoptable-pets" onclick="navigateTo('adoptable-pets')">Adopters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro Section with Image -->
+    <div class="intro-frame">
+        <div class="main-section">
+            <img class="intro-image" src="/public/images/pet-intro3.jpg" alt="Happy Pets">
+            <h1>Welcome to Reuniting Paws</h1>
+            <p>Your pet's safety is just a click away!</p>
+            <div class="buttons">
+                <button class="action-btn" onclick="location.href='/form/lost'">Report Lost Pet</button>
+                <button class="action-btn" onclick="location.href='/form/found'">Report Found Pet</button>
+                <button class="action-btn" onclick="location.href='/form/adopt'">Request Adoption</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Include JavaScript for additional interactivity -->
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

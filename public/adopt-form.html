@@ -1,0 +1,48 @@
+<!-- public/adopt-form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Adoption - Pet Reunion</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="/about" onclick="navigateTo('about')">About Us</a></li>
+                <li><a href="/contact" onclick="navigateTo('contact')">Contact Us</a></li>
+                <li><a href="/food-tips" onclick="navigateTo('food-tips')">Food Tips</a></li>
+                <li><a href="/training-tips" onclick="navigateTo('training-tips')">Training Tips</a></li>
+                <li><a href="/lost-pets" onclick="navigateTo('lost-pets')">Lost Pets</a></li>
+                <li><a href="/found-pets" onclick="navigateTo('found-pets')">Found Pets</a></li>
+                <li><a href="/adoptable-pets" onclick="navigateTo('adoptable-pets')">Adopters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Adopt Pet Form -->
+    <div class="container">
+        <h1>Request Adoption</h1>
+        <form action="/submit/adopt" method="POST" class="form-container">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="description">Why You Want to Adopt:</label>
+            <textarea name="description" id="description" rows="4" required></textarea>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="Contact no">Contact no</label>
+            <input type="number" name="contact" id="contact" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
