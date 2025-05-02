@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Reunion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h1 class="logo">Pet Reunion</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><button onclick="showForm('lost')">Lost</button></li>
+                <li><button onclick="showForm('found')">Found</button></li>
+                <li><button onclick="showForm('adopt')">Adopt</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Pet Reunion</h2>
+            <p>Reunite with your pets or help others adopt a loving companion!</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/300" alt="Happy Family with Pets">
+        </div>
+    </section>
+
+    <!-- Form Popup -->
+    <div id="form-popup" class="form-popup">
+        <form id="petForm" enctype="multipart/form-data" method="POST" action="/upload">
+            <h3 id="form-title">Form Title</h3>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="petName">Pet Name:</label>
+            <input type="text" id="petName" name="petName" required>
+
+            <label for="description">Pet Description:</label>
+            <textarea id="description" name="description" rows="3" required></textarea>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
